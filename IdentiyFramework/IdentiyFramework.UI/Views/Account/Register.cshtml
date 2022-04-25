@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="modal modal-signin position-static d-block  py-6" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+            <div class="container">
+
+                <h1>Register</h1>
+
+                @using (Html.BeginForm())
+                {
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="form-group">
+
+                        <label for="FullName">FullName</label>
+
+                        <input type="text" name="FullName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="UserName">UserName</label>
+
+                        <input type="text" name="UserName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="Mail">Mail</label>
+
+                        <input type="email" name="Mail" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="Password">Password</label>
+
+                        <input type="password" name="Password" class="form-control" />
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="RePassword">RePassword</label>
+
+                        <input type="password" name="RePassword" class="form-control" />
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary"> Register</button>
+
+
+                }
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
